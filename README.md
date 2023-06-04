@@ -7,8 +7,9 @@
 
 ## Создание репозитория по шаблону
 
-Используй этот репозиторий организации GoIT как шаблон для создания репозитория
-своего проекта. Для этого нажми на кнопку `«Use this template»` и выбери опцию
+"homepage": "https://ivanpanteliuk.github.io/currency-exchange/", Используй этот
+репозиторий организации GoIT как шаблон для создания репозитория своего проекта.
+Для этого нажми на кнопку `«Use this template»` и выбери опцию
 `«Create a new repository»`, как показано на изображении.
 
 ![Creating repo from a template step 1](./assets/template-step-1.png)
@@ -53,10 +54,6 @@ GitHub.
 ветка `main`. Например, после прямого пуша или принятого пул-реквеста. Для этого
 необходимо в файле `package.json` отредактировать поле `homepage`, заменив
 `your_username` и `your_repo_name` на свои, и отправить изменения на GitHub.
-
-```json
-"homepage": "https://your_username.github.io/your_repo_name/"
-```
 
 Далее необходимо зайти в настройки GitHub-репозитория (`Settings` > `Pages`) и
 выставить раздачу продакшн версии файлов из папки `/root` ветки `gh-pages`, если
