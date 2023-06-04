@@ -4,11 +4,7 @@ export const axiosBaseQuery =
   ({ baseUrl } = { baseUrl: '' }) =>
   async ({ url, method, data, params }) => {
     try {
-      const dataFromLs = JSON.parse(localStorage.getItem('persist:auth'));
-      const storedToken = JSON.parse(dataFromLs.token);
-      const axiosAuthorizationHeader =
-        axios.defaults.headers.common.Authorization;
-      if (storedToken && !axiosAuthorizationHeader) token.set(storedToken);
+      token.set();
       const result = await axios({ url: baseUrl + url, method, data, params });
       return { data: result.data };
     } catch (axiosError) {
@@ -25,9 +21,9 @@ export const axiosBaseQuery =
 
 export const token = {
   set(token) {
-    axios.defaults.headers.common.Authorization = `Bearer ${token}`;
+    axios.defaults.headers.common.apikey = 'zQIn97tCUkXPH6kQ7gbfgJSFBM4zl24y';
   },
   unset() {
-    axios.defaults.headers.common.Authorization = '';
+    axios.defaults.headers.common.apikey = '';
   },
 };
